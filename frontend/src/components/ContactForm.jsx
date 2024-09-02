@@ -15,7 +15,7 @@ const ContactForm = () => {
       console.log(response.data);
       if (response.status === 201) {
         // alert('Thanks for signing up!');
-        toast.success(`Thanks for signing up, ${email}!`, {
+        toast.success(`🎉 Thank You for Signing Up!`, {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -92,7 +92,7 @@ const ContactForm = () => {
         <h3>Contact Us</h3>
         <p><strong>Email:</strong> legalEase@gmail.com</p>
         {/* <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adityaraj212" target="_blank" rel="noopener noreferrer">linkedin.com/in/adityaraj212</a></p> */}
-        <p><strong>GitHub:</strong> <a href="https://github.com/AdityaRaj212" target="_blank" rel="noopener noreferrer">github.com/AdityaRaj212</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/AdityaRaj212/LegalEase" target="_blank" rel="noopener noreferrer">github.com/AdityaRaj212</a></p>
       </div>
 
     </section>

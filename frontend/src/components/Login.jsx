@@ -19,6 +19,10 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(""); // Added for error message handling
 
+  const handleSignUpSwitch = () => {
+    navigate('/signup');
+  }
+
   const handleClickShowPassword = () => setShowPassword(!showPassword);
 
   const handleMouseDownPassword = (event) => {
@@ -101,9 +105,12 @@ const Login = () => {
           </Button>
           <Typography variant="body2" className={styles.signupLink}>
             Don’t have an account?{" "}
-            <a href="/signup" className={styles.signupAnchor}>
+            <a onClick={handleSignUpSwitch} className={styles.signupAnchor}>
               Sign Up
             </a>
+            {/* <a href="/signup" className={styles.signupAnchor}>
+              Sign Up
+            </a> */}
           </Typography>
         </form>
       </div>

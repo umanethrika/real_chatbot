@@ -25,6 +25,10 @@ const Signup = () => {
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleClickShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
 
+  const handleLoginSwitch = () => {
+    navigate('/login')
+  }
+
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
@@ -144,7 +148,7 @@ const Signup = () => {
           </Button>
           <Typography variant="body2" className={styles.loginLink}>
             Already have an account?{" "}
-            <a href="/login" className={styles.loginAnchor}>
+            <a onClick={handleLoginSwitch} className={styles.loginAnchor}>
               Login
             </a>
           </Typography>

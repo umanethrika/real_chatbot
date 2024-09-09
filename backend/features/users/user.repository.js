@@ -1,6 +1,41 @@
 import { UserModel } from "./user.schema.js";
 
 export default class UserRepository{
+    async addUser(userName, email, password){
+        try{
+            const newUser = new UserModel({
+                userName,
+                email, 
+                password,
+            });
+            await newUser.save();
+            return newUser;
+        }catch(err){
+            console.log('Error while creating user account: ' + err);
+            throw err;
+        }
+    }
+
+    async signOut(userId){
+        try{
+            const user = await UserModel.findById(userId);
+            console.log(user);
+            return user;
+        }catch(err){
+            console.log('Error while logging out');
+            throw err;
+        }
+    }
+
+    async getUser(email,password){
+        try{
+            const user = await UserModel.findOne({email, password});
+            return user;
+        }catch(err){
+            console.log('Error while searching user: ' + err);
+            throw err;
+        }
+    }
     async storeEmail(email){
         try{
             const newUser = new UserModel({email});

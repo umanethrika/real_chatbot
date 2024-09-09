@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/DescriptionSection.css';
+import './styles/DescriptionSection.css';
 
 const DescriptionSection = () => {
   return (

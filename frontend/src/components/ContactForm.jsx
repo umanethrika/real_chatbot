@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ReactTyped } from 'react-typed';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../styles/ContactForm.css';
+import './styles/ContactForm.css';
 
 const ContactForm = () => {
   const [email, setEmail] = useState('');

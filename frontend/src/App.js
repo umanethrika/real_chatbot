@@ -1,24 +1,20 @@
 import React from 'react';
-import './styles/App.css';
-import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
-import ContactForm from './components/ContactForm';
-import DescriptionSection from './components/DescriptionSection';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 function App() {
-  const scrollToFeatures = () => {
-    const featuresSection = document.getElementById('features-section');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="app">
-      <HeroSection scrollToFeatures={scrollToFeatures} />
-      <FeaturesSection id="features-section" />
-      <DescriptionSection />
-      <ContactForm />
+      <Router>
+        <Routes>
+          <Route path="/" element = {<Home />} />
+          <Route path="/login" element = {<Login />} />
+          <Route path="/signup" element = {<Signup />} />
+        </Routes>
+      </Router> 
     </div>
   );
 }
